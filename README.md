@@ -1,7 +1,6 @@
 # Mastermind
-A program that randomly creates a string of colours based on the users initial input. The program then has to try and guess what that string of colours is within a certain amount of guesses as defined by the user.
+My program consists of 4 classes: 
 
-My program consists of 4 classes. 
 The Guess contains the code that has been guessed by the computer and 2 main methods. The Match method compares this guess to the secret code and returns the number of black and white pegs. The Guess method is a constructor that creates a char array the size of the number of pegs chosen to hold the code begin guessed.
 
 The Game class holds the game parameters such as the secret code, maximum guesses and number of pegs and maintains a list of all possible guesses. It then uses this list to choose the next guess and reduces the list after each guess based on the results returned for the guesses to reduce the search space. There are 5 main methods here the first being Game. This is a constructor that calculates the maximum number of guesses for the number of pegs and colours chosen using the number of colours^number of pegs. It then creates a list to hold all the possible guesses and populates this list with the guessed colours. The GenerateSecretCode method generates the secret code to be guessed by creating a new array for the secret code and assigning it random colours. The constructor then initialises the possible guesses list by populating it with all possible codes using the InitaliseAllpossibleCodes method. After this it generates a guess (MakeNextGuess) from the list of remaining possible guesses and if the game is not complete, reduces the possible guesses based on the results for the current guess (ReducePossibilities).
